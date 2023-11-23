@@ -100,7 +100,7 @@ namespace Air_Express
                 lblFC.Text = flightcodes.ToString();
 
 
-                  StreamWriter objFC = new StreamWriter(@"D:\School\Projects\1st Year\APDP101_Phase2_21\BookFlight.txt", true); //Replace With The Path of Your Textfile
+                  StreamWriter objFC = new StreamWriter(@"D:\BookFlight.txt", true); //Replace With The Path of Your Textfile
 
 
                 using (objFC)
@@ -112,7 +112,7 @@ namespace Air_Express
                     
                 }
 
-                StreamWriter objIDCodes = new StreamWriter(@"D:\School\Projects\1st Year\APDP101_Phase2_21\IDnCodes.txt", true);
+                StreamWriter objIDCodes = new StreamWriter(@"D:\IDnCodes.txt", true); //Replace With The Path of Your Textfile
                 using (objIDCodes)
                 {
                     objIDCodes.Write(flightcodes + "\t" + departure + "\t" + destination +"\t"+FinalAmount.ToString("C")+ "\t"+ReturnYN+"\n");
@@ -162,8 +162,8 @@ namespace Air_Express
             DialogResult dialog = MessageBox.Show("All your details will be lost and your flight will not get booked.\nAre you sure you want to go back to the Menu?", "Menu", MessageBoxButtons.YesNo);
             if (dialog == DialogResult.Yes)
             {
-                List<string> lines = File.ReadAllLines(@"C:\Users\lusan\Desktop\APDP101_Phase2_21\IDnCodes.txt").ToList();
-                File.WriteAllLines(@"C:\Users\lusan\Desktop\APDP101_Phase2_21\IDnCodes.txt", lines.GetRange(0, lines.Count - 1).ToArray());
+                List<string> lines = File.ReadAllLines(@"D:\IDnCodes.txt").ToList(); //Replace With The Path of Your Textfile
+                File.WriteAllLines(@"D:\IDnCodes.txt", lines.GetRange(0, lines.Count - 1).ToArray()); //Replace With The Path of Your Textfile
                 this.Hide();
                 Home form = new Home();
                 form.Show();

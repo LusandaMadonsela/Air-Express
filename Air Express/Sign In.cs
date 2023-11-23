@@ -34,7 +34,7 @@ namespace Air_Express
             Password = txtPassword.Text;
             SignInFormClass objPFC = new SignInFormClass(Email, Password);
 
-            StreamReader objSignIn = new StreamReader(@"D:\School\Projects\1st Year\APDP101_Phase2_21\SignUpInfo.txt", true); //Replace With The Path of Your Textfile
+            StreamReader objSignIn = new StreamReader(@"D:\SignUpInfo.txt", true); //Replace With The Path of Your Textfile
 
             using (objSignIn)
             {

@@ -57,14 +57,14 @@ namespace Air_Express
             {
                 MessageBox.Show(objPDC.PassengerReady());
 
-                StreamWriter objSP = new StreamWriter(@"D:\School\Projects\1st Year\APDP101_Phase2_21\SavePassengerDetails.txt", true); //Replace With The Path of Your Textfile
+                StreamWriter objSP = new StreamWriter(@"D:\SavePassengerDetails.txt", true); //Replace With The Path of Your Textfile
 
                 using (objSP)
                 {
                     objSP.Write(objPDC.GetDisplay());
                 }
 
-                StreamWriter objIDCodes = new StreamWriter(@"D:\School\Projects\1st Year\APDP101_Phase2_21\IDnCodes.txt", true); //Replace With The Path of Your Textfile
+                StreamWriter objIDCodes = new StreamWriter(@"D:\IDnCodes.txt", true); //Replace With The Path of Your Textfile
                 using (objIDCodes)
                 {
                     objIDCodes.Write(ID + "\t" + name + "\t" + surname + "\t" + cellNum + "\t");

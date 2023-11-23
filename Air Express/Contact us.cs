@@ -45,7 +45,7 @@ namespace Air_Express
             }
             else
             {
-                StreamWriter Writer = new StreamWriter(@"D:\School\Projects\1st Year\APDP101_Phase2_21\Contact_Us.txt", true); //Replace With The Path of Your Textfile
+                StreamWriter Writer = new StreamWriter(@"D:\Contact_Us.txt", true); //Replace With The Path of Your Textfile
 
 
                 using (Writer)

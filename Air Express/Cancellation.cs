@@ -27,7 +27,7 @@ namespace Air_Express
             passengerID = txtPassengerID.Text;
             CancellationsClass objC = new CancellationsClass(flightcode, passengerID);
 
-            StreamReader IDnCodes = new StreamReader(@"D:\School\Projects\1st Year\APDP101_Phase2_21\IDnCodes.txt", true); //Replace With The Path of Your Textfile
+            StreamReader IDnCodes = new StreamReader(@"D:\IDnCodes.txt", true); //Replace With The Path of Your Textfile
 
 
 
